@@ -1,17 +1,10 @@
+var fortune = require('./lib/fortune.js');
 var express = require('express');
 
 var app = express();
 
 //設定handlebars view引擎
 var handlebars = require('express3-handlebars').create({defaultLayout: 'main'});
-
-var fortunes = [
-	"Conquer your fears or they will conquer you.",
-	"Rivers needs springs.",
-	"Do not fear what you don't know.",
-	"You will have a pleasant surprise.",
-	"Whenever possible, keep it simple."
-]
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
@@ -25,8 +18,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/about', function(req, res){
-	var randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
-	res.render('about', {fortune: randomFortune});
+	res.render('about', {fortune: fortune.getFortune()});
 });
 
 //自訂404頁面
