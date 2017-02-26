@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Meadlowlark Travel</title>
+	{{{_sections.head}}}
 	{{#if showTests}}
 		<link rel="stylesheet" href="/vendor/mocha.css">
 	{{/if}}
@@ -12,6 +13,7 @@
 		<img src="/img/logo.png" />
 	</header>
 	{{{body}}}
+	{{{_sections.jquery}}}
 	{{#if showTests}}
 		<div id="mocha"></div>
 		<script src="/vendor/mocha.js"></script>
