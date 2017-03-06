@@ -14,9 +14,12 @@
     "cookie-parser": "^1.4.3",
     "cookie-session": "^2.0.0-beta.1",
     "express": "^4.14.1",
+    "express-logger": "0.0.3",
     "express3-handlebars": "^0.5.2",
     "formidable": "^1.1.1",
     "jquery-file-upload-middleware": "^0.1.8",
+    "loadtest": "^2.3.0",
+    "morgan": "^1.8.1",
     "nodemailer": "^3.1.4"
   },
   "devDependencies": {
